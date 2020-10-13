@@ -1,0 +1,209 @@
+
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+<script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Nov 3, 2020 00:00:01").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+
+          // Display the result in the element with id="demo"
+          document.getElementById("demo").innerHTML = days
+          // If the count down is finished, write some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+
+</script>
+
+    <main role="main" class="container">
+    <main class="css-17j3c3d">
+    <div class="row">
+    <div class="col-md-8">
+    <div class="css-zwkg4z">
+    <div class=".css-89xpxa">
+
+
+    <section style="position:relative">
+
+    <!-- Top Story Header -->
+    <header>
+    <div class="css-18wsigh">
+    <span class="css-x5e31x">
+    <span class="css-1jr5l57"><b> News </b> </span> "Top Story" </span>
+    </div>
+    <br>
+    </header>
+
+
+    <!-- Top Story Picture -->
+    <article>
+    <a href="/not_done">
+    <div>
+    <img title="SC Top Story" width="90%" src="{{url_for('static', filename='debate_Cunningham.png')}}">
+    </img>
+    </div>
+
+    <!-- Top Story Description -->
+    <h2 class="css-rlawu">
+    In final SC congressional debate, Nancy Mace and Joe Cunningham try to avoid Trump
+    </h2>
+    <div>
+    <span class="css-o3ula8 e13bwyn60">
+    By
+    <!-- -->
+    Sean Williams
+    </span>
+    </div>
+    </a>
+    </article>
+
+
+
+
+
+
+    </section>
+    </div>
+    </div>
+    </div>
+
+
+
+    <div class="col-md-4" style="position:relative">
+    <section>
+
+
+
+    <!-- Other Articles Header -->
+    <header>
+    <span class="css-x5e31x">
+    <span class="css-1jr5l57"> <b> News </b>  </span> "Featured" </span>
+    </header>
+
+
+
+    <!-- Other Articles -->
+    <div class="css-z78f2p">
+
+
+    <article class="css-1tdvlph">
+
+    <a class="css-k008qs" href="/not_done">
+    <div class="css-1ev106r">
+    <div class="css-8atqhb">
+    <img title="Another Story" width="100%" src="{{url_for('static', filename='CunninghamStory.jpg')}}">
+    </div>
+    </div>
+
+    <div class="css-hoe9xz">
+
+
+      <h3 style="color:#0D0D0D;margin-top:0" class="css-1628fxq e7f1hlv0">
+      Environmental laws passed by Cunningham
+      </h3>
+
+    <div class="css-94x4tq e13bwyn60">
+    By <!-- --> Keelin White
+    </div>
+
+    </div>
+    </a>
+
+    </article>
+
+    <article class="css-1tdvlph">
+      <a class="css-k008qs" href="/not_done">
+      <div class="css-1ev106r">
+      <div class="css-8atqhb">
+      <img title="Another Story" width="100%" src="{{url_for('static', filename='Lindsey_Graham.jpg')}}">
+      </div>
+      </div>
+
+      <div class="css-hoe9xz">
+
+
+        <h3 style="color:#0D0D0D;margin-top:0" class="css-1628fxq e7f1hlv0">
+        Will the silent majority show up for Graham?
+        </h3>
+
+      <div class="css-94x4tq e13bwyn60">
+      By <!-- --> Sandra Black
+      </div>
+
+      </div>
+      </a>
+
+    </article>
+
+    <article class="css-1tdvlph">
+      <a class="css-k008qs" href="/not_done">
+      <div class="css-1ev106r">
+      <div class="css-8atqhb">
+      <img title="Another Story" width="100%" src="{{url_for('static', filename='Scott.jpeg')}}">
+      </div>
+      </div>
+
+      <div class="css-hoe9xz">
+
+
+        <h3 style="color:#0D0D0D;margin-top:0" class="css-1628fxq e7f1hlv0">
+        Is Tim Scott the future of the GOP?
+        </h3>
+
+      <div class="css-94x4tq e13bwyn60">
+      By <!-- -->Joseph Curl
+      </div>
+
+      </div>
+      </a>
+
+    </article>
+
+
+    </section>
+    </div>
+
+
+
+    </div>
+
+    </main>
+    </main>
+
+    <div class="Toastify"><br><br></div>
+    <div class="css-d7h9ck">
+      <section id="election-signup" class="css-dhro7d e1kbyuqk0" width="100%">
+        <h1 class="css-5w0168 e1kbyuqk1">
+          <br>
+          <span class="css-3ulb31 e17f3ixj1" id="demo">
+          </span>
+
+          <span class="css-1cbifvp e1kbyuqk2"> days <!-- -->until election</span>
+        </h1>
+
+        <div class="css-0 e1kbyuqk3">
+        <h2 class="css-12xet20 e1kbyuqk4">Don't miss out on our coverage.</h2>
+        <br> <br><br><br>
+        </div>
+    </div>
+
+
+
+{% endblock %}
